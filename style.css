@@ -9,3 +9,130 @@
     src: url('fonts/BarlowSemiCondensedSemiBold.eot');
     src: url('fonts/BarlowSemiCondensedSemiBold.eot') format('embedded-opentype'), url('fonts/BarlowSemiCondensedSemiBold.woff2') format('woff2'), url('fonts/BarlowSemiCondensedSemiBold.woff') format('woff'), url('fonts/BarlowSemiCondensedSemiBold.ttf') format('truetype'), url('fonts/BarlowSemiCondensedSemiBold.svg#BarlowSemiCondensedSemiBold') format('svg');
 }
+
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --dark-G-blue: hsl(217, 19%, 35%);
+    --dark-B-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-G-blue: hsl(210, 46%, 95%);
+    --font-size: 13px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-G-blue);
+    display: flex;
+    min-height: 100vh;
+}
+
+main {
+    margin: auto;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size);
+    font-family: 'BarlowSemiCondensedMedium';
+}
+
+main * :not(p) {
+    font-family: 'BarlowSemiCondensedSemiBold';
+}
+
+h1 {
+    font-size: var(--font-size);
+}
+
+h2 {
+    font-size: 1.62em;
+    margin-top: .25em;
+}
+
+span {
+    display: block;
+    opacity: .5;
+}
+
+p {
+    opacity: .7;
+}
+
+.name {
+    border-radius: .5rem;
+    margin: .5rem 0;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.name div {
+    display: flex;
+}
+
+.name img {
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    max-width: 2rem;
+    max-height: 2rem;
+    align-self: center;
+    margin-right: 1rem;
+}
+
+.daniel {
+    grid-area: daniel;
+    background: url(images/bg-pattern-quotation.svg) no-repeat top 0 left 90%;
+    background-color: var(--moderate-violet);
+    color: var(--white);
+}
+
+.jona {
+    grid-area: jona;
+    background-color: var(--dark-G-blue);
+    color: var(--white);
+}
+
+.jean {
+    grid-area: jean;
+    background-color: var(--white);
+    color: var(--dark-G-blue);
+}
+
+.pat {
+    grid-area: pat;
+    background-color: var(--dark-B-blue);
+    color: var(--white);
+}
+
+.pat img {
+    border-color: var(--moderate-violet);
+}
+
+.kira {
+    grid-area: kira;
+    background-color: var(--white);
+    color: var(--dark-G-blue);
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "daniel daniel jona kira" "jean pat pat kira";
+        column-gap: 1rem;
+    }
+}
+
+
+/*.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}*/
