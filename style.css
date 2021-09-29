@@ -118,7 +118,7 @@ p {
     color: var(--dark-G-blue);
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 900px) {
     main {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
